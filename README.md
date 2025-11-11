@@ -43,7 +43,7 @@ sudo systemctl enable docker
 sudo systemctl restart docker
 ```
 
-#!/bin/bash
+
 # ==============================
 # Gensyn CodeAssist VPS Setup
 # ==============================
