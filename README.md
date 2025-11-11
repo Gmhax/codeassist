@@ -58,25 +58,37 @@ source ~/.bashrc
 ```
 
 # Step 3: Clone the CodeAssist repository
-```git clone https://github.com/gensyn-ai/codeassist.git
+```
+git clone https://github.com/gensyn-ai/codeassist.git
 cd codeassist
 ```
 
 # Step 4: Update compose.yml to change host port to 3001
-```sed -i 's/3000:3000/3001:3000/' compose.yml```
+```
+sed -i 's/3000:3000/3001:3000/' compose.yml
+```
 
 # Step 5: Update run.py to expose web UI port 3001
-```sed -i 's/"3000\/tcp": 3000,/"3000\/tcp": 3001,/' run.py```
+```
+sed -i 's/"3000\/tcp": 3000,/"3000\/tcp": 3001,/' run.py
+```
 
 # Step 6: Run the program (you will need to paste your Hugging Face token manually)
-```uv run run.py```
+```
+uv run run.py
+```
 
 # Step 7: Instructions for SSH tunnel (run from your LOCAL PC)
 - echo "Run this on your LOCAL PC terminal:"
-```ssh -L 3001:localhost:3001 -L 8000:localhost:8000 -L 8008:localhost:8008 root@[YOUR_VPS_IP]```
+```
+ssh -L 3001:localhost:3001 -L 8000:localhost:8000 -L 8008:localhost:8008 root@[YOUR_VPS_IP]
+```
 
 # Step 8: Open Web Interface
 echo "Then open in your browser: http://localhost:3001"
+
+<img width="1912" height="961" alt="image" src="https://github.com/user-attachments/assets/2b74b4f3-3cae-4ff2-a54d-4ac19ddd0d51" />
+
 
 # Step 9: To finish & trigger training
 echo "After completing tasks in Web UI, return to VPS terminal and press Ctrl+C to start training"
