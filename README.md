@@ -82,7 +82,7 @@ export UV_HTTP_TIMEOUT=120
 
 ## Step 6: Run the program (you will need to paste your Hugging Face token manually)
 ```
-uv run run.py
+uv run run.py --port 3001
 ```
 
 ## Step 7: Instructions for SSH tunnel (run from your LOCAL PC)
