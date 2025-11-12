@@ -85,10 +85,13 @@ export UV_HTTP_TIMEOUT=120
 uv run run.py --port 3001
 ```
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/9fb83e15-4b63-4815-9c58-e7c977db58f1" />
+
+
 ## Step 7: Instructions for SSH tunnel (run from your LOCAL PC)
 - echo "Run this on your LOCAL PC terminal:"
 ```
-ssh -L 3001:localhost:3001 -L 8000:localhost:8000 -L 8008:localhost:8008 root@[YOUR_VPS_IP]
+ssh -L 3001:localhost:3001 -L 8000:localhost:8000 -L 8008:localhost:8008 root@YOUR_VPS_IP
 ```
 
 ## Step 8: Open Web Interface
