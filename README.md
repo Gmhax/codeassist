@@ -55,7 +55,7 @@ sudo systemctl restart docker
 
 ## Step 2: Install UV (Python Packager)
 ```
-curl -LsSf https://astral.sh/uv/install.sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
 source ~/.bashrc
 ```
 
