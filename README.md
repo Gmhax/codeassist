@@ -68,11 +68,16 @@ cd codeassist
 ## Step 4: Update compose.yml to change host port to 3001
 ```
 sed -i 's/3000:3000/3001:3000/' compose.yml
+sed -i 's/"3000\/tcp": 3000,/"3000\/tcp": 3001,/' run.py
 ```
 
-## Step 5: Update run.py to expose web UI port 3001
+## Step 5: Create a virtual environment / CPU-only PyTorch (for non-GPU VPS)
 ```
-sed -i 's/"3000\/tcp": 3000,/"3000\/tcp": 3001,/' run.py
+uv venv
+source .venv/bin/activate
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+deactivate
+export UV_HTTP_TIMEOUT=120
 ```
 
 ## Step 6: Run the program (you will need to paste your Hugging Face token manually)
